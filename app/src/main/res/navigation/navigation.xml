@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/shortenFragment">
+
+    <fragment
+        android:id="@+id/shortenFragment"
+        android:name="com.melikeey.shortlyapppsoixd.shorten.ShortenFragment"
+        android:label="Welcome Fragment"
+        tools:layout="@layout/fragment_shorten">
+
+    </fragment>
+
+</navigation>
