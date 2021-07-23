@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/ll_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
 
         <ProgressBar
             android:id="@+id/progress_bottom"
@@ -19,7 +20,80 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="HELLO" />
+            android:layout_margin="@dimen/standard_margin"
+            android:gravity="center"
+            android:text="@string/shortly"
+            android:textSize="@dimen/header_text_size"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="@dimen/shorten_image_size"
+            android:layout_height="@dimen/shorten_image_size"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_shorten_main" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/let_s_get_started"
+            android:textSize="@dimen/body_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/big_margin"
+            android:layout_marginRight="@dimen/big_margin"
+            android:gravity="center"
+            android:text="@string/shorten_info"
+            android:textSize="@dimen/body_text_size" />
     </LinearLayout>
 
-</ScrollView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_container"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/standard_margin"
+
+        android:background="@color/black">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@drawable/bg_shorten_shape" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_shorten_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/big_margin"
+                android:background="@android:drawable/editbox_background"
+                android:gravity="center"
+                android:hint="@string/hint_edittext"
+                android:padding="@dimen/standard_padding"
+                android:inputType="textUri"
+                android:importantForAutofill="no" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_shorten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginRight="@dimen/big_margin"
+                android:text="@string/btn_shorten_text" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
+

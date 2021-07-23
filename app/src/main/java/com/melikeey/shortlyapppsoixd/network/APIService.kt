@@ -1,14 +1,14 @@
 package com.melikeey.shortlyapppsoixd.network
 
-import com.melikeey.shortlyapppsoixd.shorten.ShortenLink
+import com.melikeey.shortlyapppsoixd.base.BaseResponse
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.POST
+import retrofit2.http.GET
+import retrofit2.http.Path
 
 interface APIService {
 
-    @POST("shorten/")
+    @GET("{url}/very/long/link.html")
     suspend fun shorten(
-        @Body url: String
-    ): Response<ShortenLink>
+        @Path("url", encoded = false) url: String
+    ): Response<BaseResponse>
 }

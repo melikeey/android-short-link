@@ -22,11 +22,11 @@ open class SharedViewModel @Inject constructor(
         lateinit var shortedLinkResponse: ShortenLink
 
         try {
-            shortedLinkResponse = mainRepo.shorten(strReq)!!
+            shortedLinkResponse = mainRepo.shorten("shorten?url=google.com").body()!!.result
 
             // shortLinkLiveData.postValue(shortedLinkResponse)
 
-            emit(Resource.error(data = shortedLinkResponse, message = "Error Occurred!"))
+            emit(Resource.success(data = shortedLinkResponse, message = "Error Occurred!"))
 
         } catch (exception: Exception) {
             exception.printStackTrace()
