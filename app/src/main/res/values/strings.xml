@@ -6,4 +6,8 @@
     <string name="hint_edittext">Shorten a link here..</string>
     <string name="btn_shorten_text">SHORTEN IT!</string>
     <string name="et_error_text">Please add a link here</string>
+    <string name="copy">copy</string>
+    <string name="warning_link_history">Your Link History</string>
+    <string name="no_data_available">No History !</string>
+    <string name="copied">Copied !</string>
 </resources>

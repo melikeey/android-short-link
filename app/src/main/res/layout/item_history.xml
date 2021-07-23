@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/standard_margin"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_link"
+        android:editable="false"
+        android:lines="1"
+        android:textColor="@color/black"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:drawablePadding="3dp"
+        android:inputType="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/big_margin"
+        android:layout_marginRight="@dimen/big_margin"
+        android:drawableEnd="@drawable/ic_delete"
+        android:drawableRight="@drawable/ic_delete" />
+
+    <TextView
+        android:id="@+id/tv_short_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/big_margin"
+        android:textColor="@color/cyan"
+        android:textSize="@dimen/body_text_size" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_copy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/big_margin"
+        android:layout_marginLeft="@dimen/big_margin"
+        android:layout_marginRight="@dimen/big_margin"
+        android:text="@string/copy" />
+</LinearLayout>

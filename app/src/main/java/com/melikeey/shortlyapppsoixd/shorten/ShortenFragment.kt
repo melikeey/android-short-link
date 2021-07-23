@@ -4,11 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.Navigation
 import com.melikeey.shortlyapppsoixd.R
 import com.melikeey.shortlyapppsoixd.base.BaseFragment
+import com.melikeey.shortlyapppsoixd.database.History
 import com.melikeey.shortlyapppsoixd.databinding.FragmentShortenBinding
 import com.melikeey.shortlyapppsoixd.main.MainActivity
 import com.melikeey.shortlyapppsoixd.main.SharedViewModel
@@ -79,10 +79,15 @@ class ShortenFragment : BaseFragment(), ShortenView, View.OnClickListener {
 
         response!!.let {
 
+            viewModel.getDatabase().historyDao().insert(History(
+                    binding.etShortenUrl.text.toString(), response.shortLink,
+                )
+            )
+
             Navigation.findNavController(
                 requireActivity(),
                 R.id.nav_host
-            ).navigate(R.id.historyFragment, bundleOf("link" to response))
+            ).navigate(R.id.historyFragment)
 
         }
     }
@@ -92,6 +97,8 @@ class ShortenFragment : BaseFragment(), ShortenView, View.OnClickListener {
 
         binding.progressBottom.visibility = View.GONE
         isAllDataLoaded = true
+
+        showToast(message)
     }
 
     override fun onLoading() {

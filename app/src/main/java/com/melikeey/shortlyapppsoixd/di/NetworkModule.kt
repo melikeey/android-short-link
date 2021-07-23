@@ -4,6 +4,7 @@ import androidx.databinding.library.BuildConfig
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.melikeey.shortlyapppsoixd.network.APIService
+import com.melikeey.shortlyapppsoixd.util.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -24,7 +25,7 @@ object NetworkModule {
     fun provideRetrofit(okHttpClient: OkHttpClient, gson: Gson): Retrofit {
         return Retrofit.Builder()
             .client(okHttpClient)
-            .baseUrl("https://api.shrtco.de/v2/")
+            .baseUrl(Constants.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
     }

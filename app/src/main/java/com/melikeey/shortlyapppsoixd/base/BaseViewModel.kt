@@ -12,5 +12,4 @@ open class BaseViewModel @Inject constructor(
 
     @Inject
     lateinit var mainRepository: MainRepository
-
 }

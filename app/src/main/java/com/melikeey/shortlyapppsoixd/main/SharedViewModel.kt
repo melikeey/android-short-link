@@ -3,8 +3,10 @@ package com.melikeey.shortlyapppsoixd.main
 import android.app.Application
 import androidx.lifecycle.liveData
 import com.melikeey.shortlyapppsoixd.base.BaseViewModel
+import com.melikeey.shortlyapppsoixd.database.AppDatabase
 import com.melikeey.shortlyapppsoixd.network.Resource
 import com.melikeey.shortlyapppsoixd.shorten.ShortenLink
+import com.melikeey.shortlyapppsoixd.util.Constants
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import javax.inject.Inject
@@ -15,18 +17,17 @@ open class SharedViewModel @Inject constructor(
     application: Application
 ) : BaseViewModel(application) {
 
-    var app: Application = application
+    @Inject
+    lateinit var db: AppDatabase
 
-    fun shorten(strReq: String) = liveData(Dispatchers.IO) {
+    fun shorten(url: String) = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
-        lateinit var shortedLinkResponse: ShortenLink
+        lateinit var shortenLinkResponse: ShortenLink
 
         try {
-            shortedLinkResponse = mainRepo.shorten("shorten?url=google.com").body()!!.result
+            shortenLinkResponse = mainRepo.shorten(Constants.URL_PATH + url).body()!!.result
 
-            // shortLinkLiveData.postValue(shortedLinkResponse)
-
-            emit(Resource.success(data = shortedLinkResponse, message = "Error Occurred!"))
+            emit(Resource.success(data = shortenLinkResponse, message = "Error Occurred!"))
 
         } catch (exception: Exception) {
             exception.printStackTrace()
@@ -37,5 +38,9 @@ open class SharedViewModel @Inject constructor(
                 )
             )
         }
+    }
+
+    fun getDatabase(): AppDatabase {
+        return db
     }
 }
