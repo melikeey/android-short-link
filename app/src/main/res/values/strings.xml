@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Shortly</string>
     <string name="shortly">Shortly</string>
-    <string name="let_s_get_started">Let s get started!</string>
+    <string name="let_s_get_started">Let\'s get started!</string>
     <string name="shorten_info">Paste your first link into the field to shorten it</string>
     <string name="hint_edittext">Shorten a link here..</string>
     <string name="btn_shorten_text">SHORTEN IT!</string>

@@ -55,8 +55,7 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/ll_container"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="@dimen/standard_margin"
-
+        android:layout_marginTop="@dimen/big_margin"
         android:background="@color/black">
 
         <ImageView
@@ -80,9 +79,9 @@
                 android:background="@android:drawable/editbox_background"
                 android:gravity="center"
                 android:hint="@string/hint_edittext"
-                android:padding="@dimen/standard_padding"
+                android:importantForAutofill="no"
                 android:inputType="textUri"
-                android:importantForAutofill="no" />
+                android:padding="@dimen/standard_padding" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_shorten"

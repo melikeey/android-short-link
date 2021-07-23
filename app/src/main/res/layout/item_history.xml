@@ -18,14 +18,16 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/big_margin"
         android:layout_marginRight="@dimen/big_margin"
-        android:drawableEnd="@drawable/ic_delete"
-        android:drawableRight="@drawable/ic_delete" />
+        android:drawableEnd="@drawable/ic_delete" />
 
     <TextView
         android:id="@+id/tv_short_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/big_margin"
+        android:layout_marginLeft="@dimen/big_margin"
+        android:layout_marginRight="@dimen/big_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:layout_marginBottom="@dimen/standard_margin"
         android:textColor="@color/cyan"
         android:textSize="@dimen/body_text_size" />
 
@@ -33,7 +35,7 @@
         android:id="@+id/btn_copy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/big_margin"
+        android:layout_marginBottom="@dimen/standard_margin"
         android:layout_marginLeft="@dimen/big_margin"
         android:layout_marginRight="@dimen/big_margin"
         android:text="@string/copy" />
