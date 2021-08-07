@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.melikeey.shortlyapppsoixd.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import com.melikeey.shortlyapppsoixd.databinding.ActivityMainBinding
 
 
 @AndroidEntryPoint
@@ -30,7 +30,8 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             delay(2000)
             if (!isProgressHidedBefore) {
-                binding.progressBar.visibility = View.VISIBLE
+                binding.rlCustomPb.visibility = View.VISIBLE
+                binding.navHost.visibility = View.GONE
             }
         }
     }
@@ -38,6 +39,9 @@ class MainActivity : AppCompatActivity() {
     internal fun hideLoading() {
         isLoading = false
         isProgressHidedBefore = true
-        binding.progressBar.visibility = View.GONE
+        binding.rlCustomPb.visibility = View.GONE
+        binding.navHost.visibility = View.VISIBLE
+
+
     }
 }

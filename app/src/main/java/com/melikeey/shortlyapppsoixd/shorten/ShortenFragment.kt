@@ -53,6 +53,8 @@ class ShortenFragment : BaseFragment(), ShortenView, View.OnClickListener {
     }
 
     private fun makeShortLink() {
+        binding.btnShorten.isEnabled = false
+
         viewModel.shorten(binding.etShortenUrl.text.toString()).observe(viewLifecycleOwner, {
             when (it.status) {
                 Resource.Status.SUCCESS -> onSuccess(it.data)

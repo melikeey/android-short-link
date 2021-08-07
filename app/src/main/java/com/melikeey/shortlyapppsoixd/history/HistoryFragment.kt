@@ -48,6 +48,8 @@ class HistoryFragment : BaseFragment(), HistoryAdapterCallback {
 
     override fun itemDeleted(id: Int) {
         viewModel.getDatabase().historyDao().deleteById(id)
+        showToast("Item Deleted")
+
         binding.rv.adapter = historyAdapter
 
         if (viewModel.getDatabase().historyDao().getAll().isEmpty()) {

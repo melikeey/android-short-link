@@ -55,7 +55,7 @@ class HistoryAdapter :
         }
 
         holder.etLink.setOnClickListener {
-            mHistoryAdapterCallback?.itemDeleted(historyList[position].id);
+            mHistoryAdapterCallback?.itemDeleted(historyList[position].id)
         }
     }
 
