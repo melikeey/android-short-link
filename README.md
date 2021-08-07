@@ -14,7 +14,7 @@ Android application that converts long links into short links
  - Room
 
 ## Notes
-The open source API services I use are slow and responding late. Please ignore this.
+The open source API services I use are **slow and responding late.** Please ignore this.
 
 ## Photo
 
