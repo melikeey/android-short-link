@@ -28,6 +28,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-## License
-https://github.com/melikeey
-https://www.linkedin.com/in/melikeelifdemir/
+## Communication
+- https://github.com/melikeey
+- https://www.linkedin.com/in/melikeelifdemir/
