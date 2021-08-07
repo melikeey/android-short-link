@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.melikeey.shortlyapppsoixd.R
 import com.melikeey.shortlyapppsoixd.base.BaseFragment
 import com.melikeey.shortlyapppsoixd.databinding.FragmentHistoryBinding
 import com.melikeey.shortlyapppsoixd.main.SharedViewModel
@@ -48,7 +49,8 @@ class HistoryFragment : BaseFragment(), HistoryAdapterCallback {
 
     override fun itemDeleted(id: Int) {
         viewModel.getDatabase().historyDao().deleteById(id)
-        showToast("Item Deleted")
+
+        showToast(getString(R.string.item_deleted))
 
         binding.rv.adapter = historyAdapter
 
@@ -61,6 +63,5 @@ class HistoryFragment : BaseFragment(), HistoryAdapterCallback {
             historyAdapter.setItem(viewModel.getDatabase().historyDao().getAll())
             historyAdapter.notifyDataSetChanged()
         }
-
     }
 }

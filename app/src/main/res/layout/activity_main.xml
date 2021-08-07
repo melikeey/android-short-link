@@ -25,10 +25,10 @@
 
         <ImageView
             android:id="@+id/iv_ic"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="@dimen/shorten_image_size"
+            android:layout_height="@dimen/shorten_image_size"
             android:layout_centerHorizontal="true"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/medium_margin"
             android:src="@drawable/ic_shorten_main" />
 
         <ImageView
@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/medium_margin"
             android:src="@drawable/ic_logo" />
 
         <ProgressBar
@@ -47,7 +47,7 @@
             android:layout_below="@+id/iv"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/medium_margin"
             android:focusable="true"
             android:indeterminate="true" />
 
@@ -57,10 +57,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/progress_bar"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/medium_margin"
             android:text="@string/rendering_please_wait"
             android:textColor="@color/dark_violet"
-            android:textSize="20sp"
+            android:textSize="@dimen/body_text_size"
             android:textStyle="bold" />
     </RelativeLayout>
 

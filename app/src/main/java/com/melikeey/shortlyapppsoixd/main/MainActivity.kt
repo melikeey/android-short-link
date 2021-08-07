@@ -41,7 +41,5 @@ class MainActivity : AppCompatActivity() {
         isProgressHidedBefore = true
         binding.rlCustomPb.visibility = View.GONE
         binding.navHost.visibility = View.VISIBLE
-
-
     }
 }
