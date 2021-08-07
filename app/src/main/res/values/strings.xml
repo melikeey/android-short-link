@@ -10,5 +10,5 @@
     <string name="warning_link_history">Your Link History</string>
     <string name="no_data_available">No History !</string>
     <string name="copied">Copied !</string>
-    <string name="rendering_please_wait">Rendering.. Please Wait..</string>
+    <string name="rendering_please_wait">Loading.. Please Wait..</string>
 </resources>
