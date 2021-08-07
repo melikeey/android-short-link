@@ -1,18 +1,30 @@
-### Used Technologies
+# SHORTLY
 
-Kotlin Mvvm 
+Android application that converts long links into short links
 
-Material Design
-Lifecycle
-Navigation Fragment
-coroutines
-Hilt
-Retrofit
-Room
+## Technologies
+ **Kotlin Language, MVVM Architecture**
+
+ - Material Design 
+ - Lifecycle
+ - Navigation
+ - Coroutines 
+  - Hilt
+  -  Retrofit 
+ - Room
+
+## Photo
+
+![Image 1](image1.png)
+![Image 1](image2.png)
+![Image 1](image3.png)
 
 
 
-### PHOTO
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+Please make sure to update tests as appropriate.
 
-
+## License
+@melikeey
