@@ -13,6 +13,9 @@ Android application that converts long links into short links
   -  Retrofit 
  - Room
 
+## NOTES
+The open source API services I use are slow and responding late. Please ignore this.
+
 ## Photo
 
 
