@@ -6,7 +6,7 @@ Android application that converts long links into short links
  **Kotlin Language, MVVM Architecture**
 
  - Material Design 
- - Lifecycle
+ - LiveData
  - Navigation
  - Coroutines 
   - Hilt
