@@ -16,7 +16,7 @@ Android application that converts long links into short links
 ## Photo
 
 
- <img src="https://github.com/melikeey/android-short-link/raw/main/image1.png" width="300" alt="image"/><img src="https://github.com/melikeey/android-short-link/raw/main/image2.png" width="300" alt="image"/><img src="https://github.com/melikeey/android-short-link/raw/main/image3.png" width="300" alt="image"/>
+ <img src="https://github.com/melikeey/android-short-link/raw/main/image1.png" width="250" alt="image"/><img src="https://github.com/melikeey/android-short-link/raw/main/image2.png" width="250" alt="image"/><img src="https://github.com/melikeey/android-short-link/raw/main/image3.png" width="250" alt="image"/>
 
 
 
